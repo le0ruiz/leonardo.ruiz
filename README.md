@@ -1,10 +1,14 @@
 # 🌿 Leonardo Ruiz | Portfolio Profesional - GIS & AI
 
-Sitio web portafolio profesional de **Leonardo Ruiz**, Biólogo e Ingeniero Ambiental con más de 20 años de experiencia en gestión ambiental, GIS, Inteligencia Artificial y conservación. 
+Sitio web portafolio profesional de **Leonardo Ruiz**, Biólogo e Ingeniero Ambiental con más de 20 años de experiencia en gestión ambiental, GIS, Inteligencia Artificial y conservación.
 
 Este proyecto fue desarrollado desde cero con HTML, CSS y JavaScript puro, priorizando el rendimiento, la accesibilidad y un diseño 100% responsive.
 
- **Sitio en vivo:** [leonardoruiz.vercel.app](https://leonardoruiz.vercel.app) 
+🌐 **Sitio en vivo:** [leonardoruiz.vercel.app](https://leonardoruiz.vercel.app)
+
+👤 **GitHub:** [@le0ruiz](https://github.com/le0ruiz)
+
+💼 **LinkedIn:** [linkedin.com/in/le0ruiz](https://linkedin.com/in/le0ruiz)
 
 ---
 
@@ -21,7 +25,7 @@ Este proyecto fue desarrollado desde cero con HTML, CSS y JavaScript puro, prior
 
 ---
 
-## ️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 | Tecnología | Uso |
 | :--- | :--- |
@@ -43,7 +47,6 @@ leonardo-ruiz-portfolio/
 ├── README.md               # Documentación del proyecto
 ├── images/                 # Carpeta de recursos visuales
 │   ├── leonardo-hero.jpg   # Foto principal del Hero
-│   ├── proyecto-bhp.jpg    # Imagen del caso destacado
 │   ├── proyecto-metro.jpg  # Imagen proyecto Metro Santiago
 │   ├── proyecto-vitivinícola.jpg
 │   ├── proyecto-teleferico.jpg
