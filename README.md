@@ -4,7 +4,7 @@ Sitio web portafolio profesional de **Leonardo Ruiz**, Biólogo e Ingeniero Ambi
 
 Este proyecto fue desarrollado desde cero con HTML, CSS y JavaScript puro, priorizando el rendimiento, la accesibilidad y un diseño 100% responsive.
 
- **Sitio en vivo:** [leonardoruiz.vercel.app](https://leonardoruiz.vercel.app) *(Actualiza con tu URL real si es diferente)*
+ **Sitio en vivo:** [leonardoruiz.vercel.app](https://leonardoruiz.vercel.app) 
 
 ---
 
