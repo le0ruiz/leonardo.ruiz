@@ -15,13 +15,15 @@ Este proyecto fue desarrollado desde cero con HTML, CSS y JavaScript puro, prior
 ## ✨ Características Principales
 
 - 🌍 **Soporte Bilingüe (ES/EN):** Cambio de idioma dinámico en tiempo real sin recargar la página.
-- 📱 **Diseño 100% Responsive:** Adaptación perfecta a móviles, tablets y escritorio (Mobile-First).
-- 🤖 **Sección de IA & Machine Learning:** Apartado dedicado a habilidades en LLMs, NLP, Computer Vision, Cloud AI y MLOps.
+-  **Diseño 100% Responsive:** Adaptación perfecta a móviles, tablets y escritorio (Mobile-First).
+- 🤖 **Sección de IA & Machine Learning:** Apartado dedicado a habilidades en LLMs (Claude, Copilot Studio, Gemini, Google AI Studio, Antigravity, Ollama, Qwen, DeepSeek), NLP, Computer Vision, Cloud AI y MLOps.
 - 🗺️ **Mapa Interactivo:** Integración con Google Maps para el proyecto de Ciencia Ciudadana "Murciélagos de Chile" (PCMCh).
 - 🛰️ **Galería GIS:** Showcase de análisis espacial, cartografía y monitoreo con drones.
 - ⚡ **Rendimiento Óptimo:** Carga rápida, lazy loading en imágenes y CSS optimizado.
 - ♿ **Accesibilidad (WCAG 2.1 AA):** Navegación por teclado, ARIA labels, contraste optimizado y soporte para `prefers-reduced-motion`.
-- 🔍 **SEO Técnico:** Schema.org (JSON-LD), Open Graph, Twitter Cards y meta tags completos.
+-  **SEO Técnico:** Schema.org (JSON-LD), Open Graph, Twitter Cards y meta tags completos.
+- 📄 **Descarga de CV:** Botón directo para descargar el currículum en formato PDF.
+- 💬 **Contacto por WhatsApp:** Integración directa con mensaje predefinido.
 
 ---
 
@@ -45,6 +47,8 @@ leonardo-ruiz-portfolio/
 │
 ├── index.html              # Archivo principal (HTML + CSS + JS embebido)
 ├── README.md               # Documentación del proyecto
+├── cv/
+│   └── leonardo-ruiz-cv.pdf  # Currículum descargable
 ├── images/                 # Carpeta de recursos visuales
 │   ├── leonardo-hero.jpg   # Foto principal del Hero
 │   ├── proyecto-metro.jpg  # Imagen proyecto Metro Santiago
@@ -55,4 +59,4 @@ leonardo-ruiz-portfolio/
 │   ├── gis-map1.jpg        # Imágenes galería GIS
 │   ├── gis-map2.jpg
 │   └── gis-drone.jpg
-└── (Opcional) manifest.json # Configuración PWA
+── (Opcional) manifest.json # Configuración PWA
