@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Leonardo Ruiz - Biólogo e Ingeniero Ambiental con 20+ años en gestión ambiental, GIS, IA y conservación. Experto en minería, construcción y evaluación de impacto ambiental."/>
+  <meta name="keywords" content="gestión ambiental Chile, GIS minería, evaluación impacto ambiental, EIA DIA, BHP Escondida, ingeniería ambiental, ecología paisaje, drones ambiental, inteligencia artificial, programación, conservación murciélagos"/>
+  <meta name="author" content="Rafael Leonardo Ruiz Diaz"/>
+  <meta name="theme-color" content="#1B4332"/>
+  
+  <meta property="og:title" content="Leonardo Ruiz | Biólogo & Ingeniero Ambiental - GIS & AI"/>
+  <meta property="og:description" content="Experto en gestión ambiental, GIS, IA y conservación con 20+ años de experiencia. Reconocido por BHP Escondida 2024."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="images/leonardo-hero.jpg"/>
+
+  <title>Leonardo Ruiz | Biólogo & Ingeniero Ambiental - GIS & AI</title>
+  
+  <!-- UNA SOLA FAMILIA TIPOGRÁFICA: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --verde-bosque: #1B4332;
+      --verde-hoja: #40916C;
+      --tierra: #774936;
+      --arena: #DDA15E;
+      --cielo: #606C38;
+      --blanco-hueso: #FEFAE0;
+      --gris-claro: #f8f9fa;
+      --texto-oscuro: #2d3436;
+      --texto-claro: #636e72;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.16);
+      --radius: 16px;
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--blanco-hueso);
+      color: var(--texto-oscuro);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Jerarquía tipográfica con UNA SOLA familia */
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--verde-bosque);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--verde-bosque);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--verde-bosque);
+      margin-bottom: 0.8rem;
+    }
+
+    h4 {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-weight: 600;
+      color: var(--verde-bosque);
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: var(--texto-claro);
+      font-weight: 400;
+      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    }
+
+    a {
+      color: var(--verde-hoja);
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+    a:hover { color: var(--verde-bosque); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 5vw, 2rem);
+    }
+
+    .section { padding: clamp(3rem, 8vw, 6rem) 0; position: relative; }
+    .text-center { text-align: center; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      background: rgba(254, 250, 224, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(27, 67, 50, 0.1);
+      transition: var(--transition);
+    }
+
+    header.scrolled { padding: 0.7rem 0; box-shadow: var(--shadow-sm); }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--verde-bosque);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--arena); }
+
+    nav ul {
+      display: flex;
+      gap: clamp(1rem, 2vw, 2rem);
+      list-style: none;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: var(--texto-oscuro);
+      position: relative;
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--arena);
+      transition: var(--transition);
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .lang-toggle {
+      background: var(--verde-bosque);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .lang-toggle:hover {
+      background: var(--verde-hoja);
+      transform: scale(1.05);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--verde-bosque);
+      cursor: pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--blanco-hueso) 0%, #e8f5e9 100%);
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+      padding-bottom: 4rem;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(64, 145, 108, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(221, 161, 94, 0.05) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .hero-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-content { max-width: 650px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(27, 67, 50, 0.1);
+      color: var(--verde-bosque);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 600;
+      color: var(--arena);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-description {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-primary {
+      background: var(--verde-bosque);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background: var(--verde-hoja);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--verde-bosque);
+      border-color: var(--verde-bosque);
+    }
+
+    .btn-secondary:hover {
+      background: var(--verde-bosque);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ===== HERO IMAGE ===== */
+    .hero-image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 4/5;
+      border-radius: 30px 80px 30px 80px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--verde-hoja), var(--cielo));
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    .hero-image-frame::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(27, 67, 50, 0.3) 100%);
+      pointer-events: none;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 20px;
+      left: 20px;
+      border: 3px solid var(--arena);
+      border-radius: 30px 80px 30px 80px;
+      z-index: -1;
+    }
+
+    /* ===== STATS ===== */
+    .stats-section {
+      background: var(--verde-bosque);
+      color: white;
+      padding: 4rem 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 0.5rem;
+      color: var(--arena);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-item p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* ===== EXPERTISE ===== */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .expertise-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border-top: 4px solid var(--verde-hoja);
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-top-color: var(--arena);
+    }
+
+    .expertise-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(64, 145, 108, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--verde-hoja);
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
+
+    .expertise-card:hover .expertise-icon {
+      background: var(--verde-hoja);
+      color: white;
+      transform: rotate(360deg);
+    }
+
+    /* ===== FEATURED PROJECT ===== */
+    .featured-project {
+      background: linear-gradient(135deg, var(--verde-bosque) 0%, var(--verde-hoja) 100%);
+      color: white;
+      padding: 5rem 0;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--arena);
+      color: var(--verde-bosque);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .featured-title {
+      color: white;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .featured-description {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .featured-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .featured-stat {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .featured-stat-value {
+      font-size: clamp(1.8rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--arena);
+      display: block;
+      letter-spacing: -0.02em;
+    }
+
+    .featured-stat-label {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-image-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(27, 67, 50, 0.7) 100%);
+    }
+
+    .project-content { padding: 1.5rem; }
+
+    .project-tag {
+      display: inline-block;
+      background: rgba(64, 145, 108, 0.1);
+      color: var(--verde-hoja);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .project-description { font-size: 0.95rem; margin-bottom: 1rem; }
+
+    /* ===== MAP SECTION ===== */
+    .map-section {
+      background: var(--gris-claro);
+      position: relative;
+    }
+
+    .map-info-box {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--verde-hoja);
+    }
+
+    .map-info-box h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .map-info-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .map-collaboration {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(155, 89, 182, 0.1);
+      color: #9b59b6;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-top: 2rem;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      display: block;
+    }
+
+    /* ===== GIS GALLERY ===== */
+    .gis-section { background: var(--blanco-hueso); }
+
+    .gis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gis-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+    }
+
+    .gis-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gis-item:hover img { transform: scale(1.1); }
+
+    .gis-item-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(27, 67, 50, 0.9) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gis-item:hover .gis-item-overlay { opacity: 1; }
+
+    .gis-item-title {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* ===== PUBLICATIONS ===== */
+    .publications-list { margin-top: 2rem; }
+
+    .publication-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--arena);
+      transition: var(--transition);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .publication-item:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .publication-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(221, 161, 94, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--arena);
+      font-size: 1.3rem;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+
+    .publication-meta {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 100%;
+      background: var(--verde-hoja);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content { grid-column: 1; }
+    .timeline-item:nth-child(even) .timeline-content { grid-column: 3; }
+
+    .timeline-dot {
+      grid-column: 2;
+      width: 20px;
+      height: 20px;
+      background: var(--arena);
+      border-radius: 50%;
+      border: 4px solid var(--blanco-hueso);
+      box-shadow: var(--shadow-sm);
+      z-index: 1;
+      justify-self: center;
+    }
+
+    .timeline-date {
+      font-size: 0.9rem;
+      color: var(--arena);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-company {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* ===== SKILLS TAGS ===== */
+    .skills-section {
+      background: white;
+    }
+
+    .skills-container {
+      margin-top: 2rem;
+    }
+
+    .skills-category {
+      margin-bottom: 2.5rem;
+    }
+
+    .skills-category h3 {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .skills-category h3 i {
+      color: var(--arena);
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill-tag {
+      background: rgba(64, 145, 108, 0.1);
+      color: var(--verde-hoja);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+      border: 1px solid rgba(64, 145, 108, 0.3);
+    }
+
+    .skill-tag:hover {
+      background: var(--verde-hoja);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-tag.tech {
+      background: rgba(155, 89, 182, 0.1);
+      color: #9b59b6;
+      border-color: rgba(155, 89, 182, 0.3);
+    }
+
+    .skill-tag.tech:hover {
+      background: #9b59b6;
+      color: white;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+      background: var(--verde-bosque);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-card:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-5px);
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--arena);
+      color: var(--verde-bosque);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-card h3 {
+      color: white;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .contact-card a { color: rgba(255,255,255,0.9); }
+    .contact-card a:hover { color: var(--arena); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--texto-oscuro);
+      color: rgba(255,255,255,0.7);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.7);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE - TABLET ===== */
+    @media (max-width: 992px) {
+      .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
+      .hero-content { margin: 0 auto; }
+      .hero-description { margin: 0 auto 2rem; }
+      .hero-buttons { justify-content: center; }
+      .hero-image-container { order: -1; margin-bottom: 2rem; }
+      .hero-image-frame { max-width: 320px; }
+      .hero-decoration { display: none; }
+      
+      .featured-content { grid-template-columns: 1fr; }
+      
+      .timeline::before { left: 30px; }
+      .timeline-item { grid-template-columns: 60px 1fr; }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content { grid-column: 2; }
+      .timeline-dot { grid-column: 1; }
+      
+      .map-container iframe { height: 450px; }
+    }
+
+    /* ===== RESPONSIVE - MOBILE ===== */
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        gap: 1rem;
+      }
+
+      nav ul.active { display: flex; }
+
+      nav a { font-size: 1rem; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-stats { grid-template-columns: 1fr; }
+      
+      .publication-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .publication-icon { margin: 0 auto; }
+      
+      .map-container iframe { height: 400px; }
+      
+      .expertise-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== RESPONSIVE - SMALL MOBILE ===== */
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-image-frame { max-width: 260px; }
+      
+      .map-container iframe { height: 350px; }
+      
+      .skills-tags {
+        justify-content: center;
+      }
+      
+      .skill-tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      header, .hero-buttons, .map-container, footer { display: none; }
+      body { background: white; }
+      .section { padding: 2rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">Leonardo<span>Ruiz</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li><a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+          <li><a href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+          <li><a href="#mapa" data-es="Ciencia Ciudadana" data-en="Citizen Science">Ciencia Ciudadana</a></li>
+          <li><a href="#gis" data-es="GIS" data-en="GIS">GIS</a></li>
+          <li><a href="#publicaciones" data-es="Publicaciones" data-en="Publications">Publicaciones</a></li>
+          <li><a href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+          <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+          <li><button class="lang-toggle" id="langToggle">EN</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <i class="fas fa-award"></i>
+            <span data-es="Reconocido por BHP Escondida 2024" data-en="Recognized by BHP Escondida 2024">Reconocido por BHP Escondida 2024</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span data-es="Biólogo & Ingeniero Ambiental" data-en="Biologist & Environmental Engineer">Biólogo & Ingeniero Ambiental</span>
+          </h1>
+          
+          <div class="hero-subtitle" data-es="GIS • IA • Conservación" data-en="GIS • AI • Conservation">
+            GIS • IA • Conservación
+          </div>
+          
+          <p class="hero-description" data-es="Experto en gestión ambiental, GIS, programación e inteligencia artificial con 20+ años de experiencia en minería, construcción, conservación y evaluación de impacto ambiental. Especialista en análisis espacial avanzado, drones y desarrollo de soluciones tecnológicas para la sostenibilidad ambiental." data-en="Expert in environmental management, GIS, programming and artificial intelligence with 20+ years of experience in mining, construction, conservation and environmental impact assessment. Specialist in advanced spatial analysis, drones and development of technological solutions for environmental sustainability.">
+            Experto en gestión ambiental, GIS, programación e inteligencia artificial con 20+ años de experiencia en minería, construcción, conservación y evaluación de impacto ambiental. Especialista en análisis espacial avanzado, drones y desarrollo de soluciones tecnológicas para la sostenibilidad ambiental.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              <span data-es="Trabajemos juntos" data-en="Let's work together">Trabajemos juntos</span>
+            </a>
+            <a href="#proyectos" class="btn btn-secondary">
+              <i class="fas fa-folder-open"></i>
+              <span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image-container reveal">
+          <div class="hero-image-frame">
+            <img src="images/leonardo-hero.jpg" alt="Leonardo Ruiz - Biólogo e Ingeniero Ambiental" loading="eager"/>
+          </div>
+          <div class="hero-decoration"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <h3 class="counter" data-target="20">0</h3>
+          <p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter" data-target="50">0</h3>
+          <p data-es="Proyectos gestionados" data-en="Projects managed">Proyectos gestionados</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter" data-target="3000">0</h3>
+          <p data-es="Murciélagos reubicados" data-en="Bats relocated">Murciélagos reubicados</p>
+        </div>
+        <div class="stat-item reveal">
+          <h3 class="counter" data-target="3">0</h3>
+          <p data-es="Certificaciones ISO" data-en="ISO Certifications">Certificaciones ISO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Áreas de Expertise" data-en="Areas of Expertise">Áreas de Expertise</h2>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-mountain"></i></div>
+          <h3 data-es="Gestión Ambiental en Minería" data-en="Environmental Mining Management">Gestión Ambiental en Minería</h3>
+          <p data-es="Auditorías de compromisos ambientales, monitoreo de RCAs y reportabilidad para gran minería." data-en="Environmental commitments audits, RCA monitoring, and reporting for large-scale mining.">Auditorías de compromisos ambientales, monitoreo de RCAs y reportabilidad para gran minería.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3 data-es="GIS & Sensores Remotos" data-en="GIS & Remote Sensing">GIS & Sensores Remotos</h3>
+          <p data-es="Análisis espacial avanzado con drones, imágenes satelitales y cartografía temática." data-en="Advanced spatial analysis with drones, satellite imagery, and thematic cartography.">Análisis espacial avanzado con drones, imágenes satelitales y cartografía temática.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+          <h3 data-es="IA & Programación" data-en="AI & Programming">IA & Programación</h3>
+          <p data-es="Desarrollo de soluciones con inteligencia artificial, Python, GIS automation y análisis de datos espaciales." data-en="Development of AI solutions, Python, GIS automation and spatial data analysis.">Desarrollo de soluciones con inteligencia artificial, Python, GIS automation y análisis de datos espaciales.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-leaf"></i></div>
+          <h3 data-es="Ecología & Conservación" data-en="Ecology & Conservation">Ecología & Conservación</h3>
+          <p data-es="Investigación en ecología tropical, restauración de ecosistemas y planes de manejo de fauna." data-en="Tropical ecology research, ecosystem restoration, and wildlife management plans.">Investigación en ecología tropical, restauración de ecosistemas y planes de manejo de fauna.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Project: BHP -->
+  <section class="featured-project">
+    <div class="container">
+      <div class="featured-content reveal">
+        <div>
+          <div class="featured-badge">
+            <i class="fas fa-trophy"></i>
+            <span data-es="CASO DESTACADO" data-en="FEATURED CASE">CASO DESTACADO</span>
+          </div>
+          <h2 class="featured-title" data-es="BHP Minera Escondida" data-en="BHP Minera Escondida">BHP Minera Escondida</h2>
+          <p class="featured-description" data-es="Reconocido por la Gerencia PT&E y Medio Ambiente de BHP Escondida (2024) por excelencia en la gestión de compromisos ambientales." data-en="Recognized by PT&E Management and Environment of BHP Escondida (2024) for excellence in environmental commitments management.">
+            Reconocido por la Gerencia PT&E y Medio Ambiente de BHP Escondida (2024) por excelencia en la gestión de compromisos ambientales.
+          </p>
+          <p data-es="Monitoreo de cumplimiento de compromisos de múltiples Resoluciones de Calificación Ambiental (RCA) para gerencias de Cátodos y Proyectos, con auditorías de compromisos normativos, sectoriales y estándares globales." data-en="Monitoring compliance of commitments from multiple Environmental Qualification Resolutions (RCA) for Cathodes and Projects management, with audits of regulatory, sectoral commitments, and global standards.">
+            Monitoreo de cumplimiento de compromisos de múltiples Resoluciones de Calificación Ambiental (RCA) para gerencias de Cátodos y Proyectos, con auditorías de compromisos normativos, sectoriales y estándares globales.
+          </p>
+          <div class="featured-stats">
+            <div class="featured-stat">
+              <span class="featured-stat-value">2024</span>
+              <span class="featured-stat-label" data-es="Reconocimiento BHP" data-en="BHP Recognition">Reconocimiento BHP</span>
+            </div>
+            <div class="featured-stat">
+              <span class="featured-stat-value">3+</span>
+              <span class="featured-stat-label" data-es="Años de servicio" data-en="Years of service">Años de servicio</span>
+            </div>
+            <div class="featured-stat">
+              <span class="featured-stat-value">0</span>
+              <span class="featured-stat-label" data-es="No conformidades" data-en="Non-conformities">No conformidades</span>
+            </div>
+            <div class="featured-stat">
+              <span class="featured-stat-value">100%</span>
+              <span class="featured-stat-label" data-es="Cumplimiento RCA" data-en="RCA Compliance">Cumplimiento RCA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="proyectos" class="section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-lineas-base.jpg" alt="Líneas Base Factores Bióticos - Parque Eólico Malleco" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Evaluación Ambiental" data-en="Environmental Assessment">Evaluación Ambiental</span>
+            <h3 class="project-title" data-es="Líneas Base Bióticos - Parque Eólico Malleco" data-en="Biotic Baselines - Malleco Wind Park">Líneas Base Bióticos - Parque Eólico Malleco</h3>
+            <p class="project-description" data-es="Investigador Especialista Externo de Bioecos. Elaboración de líneas base de factores bióticos para parques eólicos, incluyendo caracterización de flora, fauna y ecosistemas." data-en="External Specialist Researcher for Bioecos. Development of biotic baseline studies for wind parks, including characterization of flora, fauna, and ecosystems.">Investigador Especialista Externo de Bioecos. Elaboración de líneas base de factores bióticos para parques eólicos, incluyendo caracterización de flora, fauna y ecosistemas.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-metro.jpg" alt="Metro de Santiago - Evacuación de Murciélagos" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Conservación Urbana" data-en="Urban Conservation">Conservación Urbana</span>
+            <h3 class="project-title" data-es="Metro de Santiago - Evacuación de Murciélagos" data-en="Santiago Metro - Bat Evacuation">Metro de Santiago - Evacuación de Murciélagos</h3>
+            <p class="project-description" data-es="Desarrollo de metodologías seguras para evacuar colonia de 3,000 murciélagos en talleres de Línea 4." data-en="Development of safe methodologies to evacuate a colony of 3,000 bats in Line 4 workshops.">Desarrollo de metodologías seguras para evacuar colonia de 3,000 murciélagos en talleres de Línea 4.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-vitivinícola.jpg" alt="Evaluación Fragmentación Paisaje Vitivinícola" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Ecología del Paisaje" data-en="Landscape Ecology">Ecología del Paisaje</span>
+            <h3 class="project-title" data-es="Evaluación Multiescala de Fragmentación en Viñedos" data-en="Multiscale Landscape Fragmentation in Vineyards">Evaluación Multiescala de Fragmentación en Viñedos</h3>
+            <p class="project-description" data-es="Análisis de fragmentación del paisaje en sistemas vitivinícolas de Chile Central y su implicancia en la funcionalidad ecológica." data-en="Landscape fragmentation analysis in wine systems of Central Chile and implications for ecological functionality.">Análisis de fragmentación del paisaje en sistemas vitivinícolas de Chile Central y su implicancia en la funcionalidad ecológica.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-teleferico.jpg" alt="Teleférico de Mérida" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Infraestructura" data-en="Infrastructure">Infraestructura</span>
+            <h3 class="project-title" data-es="Teleférico de Mérida" data-en="Mérida Cable Car">Teleférico de Mérida</h3>
+            <p class="project-description" data-es="Gerencia ambiental durante 4 años, implementando 20 Planes de Manejo Ambiental con CERO accidentes." data-en="Environmental management for 4 years, implementing 20 Environmental Management Plans with ZERO accidents.">Gerencia ambiental durante 4 años, implementando 20 Planes de Manejo Ambiental con CERO accidentes.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-solar.jpg" alt="Santiago Solar" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Energía Renovable" data-en="Renewable Energy">Energía Renovable</span>
+            <h3 class="project-title" data-es="Santiago Solar" data-en="Santiago Solar">Santiago Solar</h3>
+            <p class="project-description" data-es="Jefe de proyectos para medida de compensación ambiental del parque solar en Til Til." data-en="Project manager for environmental compensation measure of the solar park in Til Til.">Jefe de proyectos para medida de compensación ambiental del parque solar en Til Til.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/proyecto-bosque.jpg" alt="Bosque CONAF-FAO" loading="lazy"/>
+            <div class="project-image-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag" data-es="Restauración" data-en="Restoration">Restauración</span>
+            <h3 class="project-title" data-es="Bosque CONAF-FAO" data-en="CONAF-FAO Forest">Bosque CONAF-FAO</h3>
+            <p class="project-description" data-es="Restauración de bosque nativo y extracción de Pino insigne en Región del Maule." data-en="Native forest restoration and removal of Radiata Pine in Maule Region.">Restauración de bosque nativo y extracción de Pino insigne en Región del Maule.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="habilidades" class="section skills-section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
+      
+      <div class="skills-container">
+        <div class="skills-category reveal">
+          <h3><i class="fas fa-satellite-dish"></i> <span data-es="GIS & Sensores Remotos" data-en="GIS & Remote Sensing">GIS & Sensores Remotos</span></h3>
+          <div class="skills-tags">
+            <span class="skill-tag">ArcGIS</span>
+            <span class="skill-tag">QGIS</span>
+            <span class="skill-tag">Google Earth Engine</span>
+            <span class="skill-tag">Drones RPAS/UAV</span>
+            <span class="skill-tag">Imágenes Satelitales</span>
+            <span class="skill-tag">Cartografía Digital</span>
+            <span class="skill-tag">Análisis Espacial</span>
+            <span class="skill-tag">Ecología del Paisaje</span>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3><i class="fas fa-code"></i> <span data-es="Programación & Inteligencia Artificial" data-en="Programming & Artificial Intelligence">Programación & Inteligencia Artificial</span></h3>
+          <div class="skills-tags">
+            <span class="skill-tag tech">Python</span>
+            <span class="skill-tag tech">R</span>
+            <span class="skill-tag tech">JavaScript</span>
+            <span class="skill-tag tech">Machine Learning</span>
+            <span class="skill-tag tech">Deep Learning</span>
+            <span class="skill-tag tech">GIS Automation</span>
+            <span class="skill-tag tech">Análisis de Datos</span>
+            <span class="skill-tag tech">Visualización de Datos</span>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3><i class="fas fa-clipboard-check"></i> <span data-es="Gestión Ambiental" data-en="Environmental Management">Gestión Ambiental</span></h3>
+          <div class="skills-tags">
+            <span class="skill-tag">EIA/DIA (Ley 19.300)</span>
+            <span class="skill-tag">ISO 9001</span>
+            <span class="skill-tag">ISO 14001</span>
+            <span class="skill-tag">ISO 45001</span>
+            <span class="skill-tag">Auditorías Ambientales</span>
+            <span class="skill-tag">Monitoreo Ambiental</span>
+            <span class="skill-tag">Planes de Manejo</span>
+            <span class="skill-tag">Evaluación de Impacto</span>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3><i class="fas fa-dove"></i> <span data-es="Conservación & Ecología" data-en="Conservation & Ecology">Conservación & Ecología</span></h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Ecología Tropical</span>
+            <span class="skill-tag">Manejo de Fauna</span>
+            <span class="skill-tag">Restauración Ecosistémica</span>
+            <span class="skill-tag">Biodiversidad</span>
+            <span class="skill-tag">Educación Ambiental</span>
+            <span class="skill-tag">Expediciones Científicas</span>
+            <span class="skill-tag">Ornitología</span>
+            <span class="skill-tag">Botánica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citizen Science Map -->
+  <section id="mapa" class="section map-section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Ciencia Ciudadana: Murciélagos de Chile" data-en="Citizen Science: Bats of Chile">Ciencia Ciudadana: Murciélagos de Chile</h2>
+      
+      <div class="map-info-box reveal">
+        <h3 data-es="🦇 Murciélagos de Chile" data-en=" Bats of Chile">🦇 Murciélagos de Chile</h3>
+        <p data-es="Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile." data-en="Interactive citizen science map for monitoring and conservation of bats in Chile.">
+          Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile.
+        </p>
+        <div class="map-collaboration">
+          <i class="fas fa-handshake"></i>
+          <span data-es="En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)" data-en="In collaboration with Bat Conservation Program of Chile (PCMCh)">
+            En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)
+          </span>
+        </div>
+      </div>
+      
+      <div class="map-container reveal">
+        <iframe 
+          src="https://www.google.com/maps/d/u/0/embed?mid=1ZjUFUflQKGELB8vMK9lBV7SPGsQs3bFH&ehbc=2E312F" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Murciélagos de Chile - Ciencia Ciudadana PCMCh">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIS Gallery -->
+  <section id="gis" class="section gis-section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Galería GIS & Análisis Espacial" data-en="GIS & Spatial Analysis Gallery">Galería GIS & Análisis Espacial</h2>
+      <p class="text-center reveal" style="max-width: 700px; margin: 0 auto 2rem;" data-es="Análisis espacial avanzado, cartografía temática, modelamiento con IA y monitoreo con drones para proyectos ambientales." data-en="Advanced spatial analysis, thematic cartography, AI modeling, and drone monitoring for environmental projects.">
+        Análisis espacial avanzado, cartografía temática, modelamiento con IA y monitoreo con drones para proyectos ambientales.
+      </p>
+      <div class="gis-grid">
+        <div class="gis-item reveal">
+          <img src="images/gis-map1.jpg" alt="Análisis GIS - Cobertura Vegetal" loading="lazy"/>
+          <div class="gis-item-overlay">
+            <div class="gis-item-title" data-es="Análisis de Cobertura Vegetal con IA" data-en="Vegetation Cover Analysis with AI">Análisis de Cobertura Vegetal con IA</div>
+          </div>
+        </div>
+        <div class="gis-item reveal">
+          <img src="images/gis-map2.jpg" alt="Fragmentación del Paisaje" loading="lazy"/>
+          <div class="gis-item-overlay">
+            <div class="gis-item-title" data-es="Fragmentación del Paisaje" data-en="Landscape Fragmentation">Fragmentación del Paisaje</div>
+          </div>
+        </div>
+        <div class="gis-item reveal">
+          <img src="images/gis-drone.jpg" alt="Monitoreo con Drones" loading="lazy"/>
+          <div class="gis-item-overlay">
+            <div class="gis-item-title" data-es="Monitoreo con Drones RPAS" data-en="RPAS Drone Monitoring">Monitoreo con Drones RPAS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publicaciones" class="section">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Publicaciones Científicas" data-en="Scientific Publications">Publicaciones Científicas</h2>
+      <div class="publications-list">
+        
+        <div class="publication-item reveal">
+          <div class="publication-icon"><i class="fas fa-book"></i></div>
+          <div>
+            <h3 class="publication-title" data-es="Libro Rojo de los Ecosistemas Terrestres de Venezuela" data-en="Red Book of Terrestrial Ecosystems of Venezuela">Libro Rojo de los Ecosistemas Terrestres de Venezuela</h3>
+            <p class="publication-meta" data-es="Colaborador | Publicado" data-en="Contributor | Published">Colaborador | Publicado</p>
+          </div>
+        </div>
+
+        <div class="publication-item reveal">
+          <div class="publication-icon"><i class="fas fa-feather-alt"></i></div>
+          <div>
+            <h3 class="publication-title" data-es="Aves consumidoras de frutos de cactáceas columnares del enclave semiárido de Lagunillas, Mérida" data-en="Fruit-eating birds of columnar cacti in the semi-arid enclave of Lagunillas, Mérida">Aves consumidoras de frutos de cactáceas columnares del enclave semiárido de Lagunillas, Mérida</h3>
+            <p class="publication-meta" data-es="Artículo científico | Ecología tropical" data-en="Scientific article | Tropical ecology">Artículo científico | Ecología tropical</p>
+          </div>
+        </div>
+
+        <div class="publication-item reveal">
+          <div class="publication-icon"><i class="fas fa-tree"></i></div>
+          <div>
+            <h3 class="publication-title" data-es="Transformación del paisaje de selva a amazónica derivado de las actividades agrícolas de la etnia Piaroa" data-en="Transformation of the jungle landscape to Amazonian derived from agricultural activities of the Piaroa ethnicity">Transformación del paisaje de selva a amazónica derivado de las actividades agrícolas de la etnia Piaroa</h3>
+            <p class="publication-meta" data-es="Investigación | Reserva Forestal Sipapo, Amazonas" data-en="Research | Sipapo Forest Reserve, Amazonas">Investigación | Reserva Forestal Sipapo, Amazonas</p>
+          </div>
+        </div>
+
+        <div class="publication-item reveal">
+          <div class="publication-icon"><i class="fas fa-route"></i></div>
+          <div>
+            <h3 class="publication-title" data-es="Proyecto de Conectividad entre los Parques Nacionales Sierra Nevada y Páramos Batallón-La Negra (Venezuela), como propuesta de áreas prioritarias de conservación" data-en="Connectivity Project between Sierra Nevada and Batallón-La Negra Páramos National Parks (Venezuela), as a proposal for priority conservation areas">Proyecto de Conectividad entre los Parques Nacionales Sierra Nevada y Páramos Batallón-La Negra (Venezuela), como propuesta de áreas prioritarias de conservación</h3>
+            <p class="publication-meta" data-es="Investigación | Publicado" data-en="Research | Published">Investigación | Publicado</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section id="experiencia" class="section" style="background: var(--gris-claro);">
+    <div class="container">
+      <h2 class="text-center reveal" data-es="Trayectoria Profesional" data-en="Professional Trajectory">Trayectoria Profesional</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-date" data-es="2023 - Presente" data-en="2023 - Present">2023 - Presente</div>
+            <h3 class="timeline-title" data-es="Ingeniero de Proyecto - Experto Ambiental" data-en="Project Engineer - Environmental Expert">Ingeniero de Proyecto - Experto Ambiental</h3>
+            <p class="timeline-company">Gestiona Consultores | BHP Minera Escondida</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-date" data-es="2021 - 2023" data-en="2021 - 2023">2021 - 2023</div>
+            <h3 class="timeline-title" data-es="Jefe de Proyectos" data-en="Project Manager">Jefe de Proyectos</h3>
+            <p class="timeline-company">Biocys | Bosque CONAF-FAO, Santiago Solar</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-date" data-es="2015 - 2024" data-en="2015 - 2024">2015 - 2024</div>
+            <h3 class="timeline-title" data-es="Investigador Especialista" data-en="Specialist Researcher">Investigador Especialista</h3>
+            <p class="timeline-company">Bioecos | Metro de Santiago, Reserva Chinchillas</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-date" data-es="2011 - 2015" data-en="2011 - 2015">2011 - 2015</div>
+            <h3 class="timeline-title" data-es="Gerente de Asuntos Ambientales" data-en="Environmental Affairs Manager">Gerente de Asuntos Ambientales</h3>
+            <p class="timeline-company">Doppelmayr | Teleférico de Mérida</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-date" data-es="2006 - 2007" data-en="2006 - 2007">2006 - 2007</div>
+            <h3 class="timeline-title" data-es="Biólogo Investigador" data-en="Research Biologist">Biólogo Investigador</h3>
+            <p class="timeline-company">IVIC | Atlas de Biodiversidad Indígena Amazónica</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <h2 class="text-center reveal" style="color: white;" data-es="Conectemos" data-en="Let's Connect">Conectemos</h2>
+      <p class="text-center reveal" style="color: rgba(255,255,255,0.9);" data-es="Disponible para proyectos de consultoría ambiental, GIS, IA y gestión de recursos naturales" data-en="Available for environmental consulting, GIS, AI, and natural resource management projects">Disponible para proyectos de consultoría ambiental, GIS, IA y gestión de recursos naturales</p>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email</h3>
+          <a href="mailto:leonardo.ruiz@gmail.com">leonardo.ruiz@gmail.com</a>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <h3 data-es="Teléfono" data-en="Phone">Teléfono</h3>
+          <a href="tel:+56984309798">+56 9 8430 9798</a>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <h3>LinkedIn</h3>
+          <a href="https://linkedin.com/in/le0ruiz" target="_blank" rel="noopener noreferrer">linkedin.com/in/le0ruiz</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Leonardo Ruiz. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Language Toggle
+    let currentLang = 'es';
+    const langToggle = document.getElementById('langToggle');
+    
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      document.documentElement.lang = currentLang;
+      
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    }, { passive: true });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('#navMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 150;
+
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = Math.ceil(target / speed);
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            if (count > target) count = target;
+            counter.innerText = count.toLocaleString();
+            requestAnimationFrame(updateCount);
+          }
+        };
+        updateCount();
+      });
+    };
+
+    const statsSection = document.querySelector('.stats-section');
+    const statsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(statsSection);
+      }
+    }, { threshold: 0.5 });
+
+    statsObserver.observe(statsSection);
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
