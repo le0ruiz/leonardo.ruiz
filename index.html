@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   
   <!-- ETIQUETA DE VERIFICACIÓN DE GOOGLE -->
   <meta name="google-site-verification" content="pqBLzfB76ME0YUp1etneoAGI6OsFzEXzKReNt3KMxbI" />
   
-  <meta name="description" content="Leonardo Ruiz - Consultor Ambiental Senior..."/>
-  <!-- resto de tu código... -->
-</head>
   <meta name="description" content="Leonardo Ruiz - Consultor Ambiental Senior. Biólogo e Ingeniero Ambiental con 20+ años en gestión ambiental, GIS, IA y conservación. Experto en minería, construcción y evaluación de impacto ambiental. Reconocido por BHP Escondida 2024."/>
   <meta name="keywords" content="Leonardo Ruiz, Consultor Ambiental Senior, gestión ambiental Chile, GIS minería, evaluación impacto ambiental, EIA DIA, BHP Escondida, ingeniería ambiental, ecología paisaje, drones ambiental, inteligencia artificial, conservación murciélagos, PCMCh, Machine Learning, NLP, Computer Vision, Google AI Studio, Antigravity"/>
   <meta name="author" content="Rafael Leonardo Ruiz Diaz"/>
@@ -48,7 +42,6 @@
   
   <!-- Favicon SVG Premium Dinámico (Inicial LR) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231B4332'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='55' font-weight='bold' fill='%23DDA15E' text-anchor='middle'%3ELR%3C/text%3E%3C/svg%3E" />
-  <link rel="manifest" href="/manifest.json"/>
 
   <title>Leonardo Ruiz | Consultor Ambiental Senior - GIS & AI</title>
   
@@ -66,29 +59,14 @@
     "@type": "Person",
     "name": "Rafael Leonardo Ruiz Diaz",
     "image": "https://leonardo-ruiz.vercel.app/images/leonardo-hero.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santiago",
-      "addressRegion": "Región Metropolitana",
-      "addressCountry": "CL"
-    },
+    "address": { "@type": "PostalAddress", "addressLocality": "Santiago", "addressRegion": "Región Metropolitana", "addressCountry": "CL" },
     "jobTitle": "Consultor Ambiental Senior",
     "description": "Biólogo e Ingeniero Ambiental con 20+ años de experiencia en gestión ambiental, GIS, IA y conservación",
     "url": "https://leonardo-ruiz.vercel.app",
-    "sameAs": [
-      "https://www.linkedin.com/in/le0ruiz",
-      "https://github.com/le0ruiz"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Gestiona Consultores"
-    },
-    "knowsAbout": ["Environmental Consulting", "Environmental Management", "GIS", "Artificial Intelligence", "Machine Learning", "NLP", "Computer Vision", "Conservation", "Mining", "Environmental Impact Assessment", "Landscape Ecology", "Remote Sensing", "Deep Learning", "Cloud AI", "Google AI Studio", "Antigravity"],
-    "award": "Reconocimiento BHP Escondida 2024 por excelencia en gestión de compromisos ambientales",
-    "hasCredential": [
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MSc Ingeniería Ambiental" },
-      { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Advanced Professional Program in GIS and AI" }
-    ]
+    "sameAs": [ "https://www.linkedin.com/in/le0ruiz", "https://github.com/le0ruiz" ],
+    "worksFor": { "@type": "Organization", "name": "Gestiona Consultores" },
+    "knowsAbout": ["Environmental Consulting", "GIS", "Artificial Intelligence", "Machine Learning", "NLP", "Computer Vision", "Conservation", "Mining", "Environmental Impact Assessment", "Landscape Ecology", "Deep Learning", "Cloud AI"],
+    "award": "Reconocimiento BHP Escondida 2024 por excelencia en gestión de compromisos ambientales"
   }
   </script>
 
@@ -226,6 +204,37 @@
     .map-collaboration { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(155, 89, 182, 0.1); color: #9b59b6; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-top: 1rem; }
     .map-container { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); margin-top: 2rem; }
     .map-container iframe { width: 100%; height: 600px; border: none; display: block; }
+
+    /* GIS Gallery */
+    .gis-section { background: var(--blanco-hueso); }
+    .gis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .gis-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; box-shadow: var(--shadow-md); cursor: pointer; }
+    .gis-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .gis-item:hover img { transform: scale(1.1); }
+    .gis-item-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, transparent 40%, rgba(27, 67, 50, 0.9) 100%); display: flex; align-items: flex-end; padding: 1.5rem; opacity: 0; transition: var(--transition); }
+    .gis-item:hover .gis-item-overlay { opacity: 1; }
+    .gis-item-title { color: white; font-size: 1.1rem; font-weight: 600; }
+
+    /* Publications */
+    .publications-list { margin-top: 2rem; }
+    .publication-item { background: white; padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--arena); transition: var(--transition); display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; }
+    .publication-item:hover { transform: translateX(10px); box-shadow: var(--shadow-md); }
+    .publication-icon { width: 50px; height: 50px; background: rgba(221, 161, 94, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--arena); font-size: 1.3rem; }
+    .publication-title { font-weight: 700; margin-bottom: 0.3rem; font-size: 1.05rem; }
+    .publication-meta { font-size: 0.9rem; font-weight: 500; }
+
+    /* Timeline */
+    .timeline { position: relative; max-width: 900px; margin: 3rem auto 0; }
+    .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 3px; height: 100%; background: var(--verde-hoja); }
+    .timeline-item { position: relative; margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 80px 1fr; gap: 2rem; align-items: center; }
+    .timeline-content { background: white; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .timeline-content:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .timeline-item:nth-child(odd) .timeline-content { grid-column: 1; }
+    .timeline-item:nth-child(even) .timeline-content { grid-column: 3; }
+    .timeline-dot { grid-column: 2; width: 20px; height: 20px; background: var(--arena); border-radius: 50%; border: 4px solid var(--blanco-hueso); box-shadow: var(--shadow-sm); z-index: 1; justify-self: center; }
+    .timeline-date { font-size: 0.9rem; color: var(--arena); font-weight: 700; margin-bottom: 0.5rem; }
+    .timeline-title { font-weight: 700; margin-bottom: 0.3rem; }
+    .timeline-company { font-size: 0.95rem; font-weight: 500; }
 
     /* Skills & AI */
     .skills-section { background: white; }
@@ -490,6 +499,7 @@
       <div class="container">
         <h2 class="text-center reveal" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
         <div class="projects-grid">
+          
           <div class="project-card reveal">
             <div class="project-image">
               <img src="images/proyecto-lineas-base.jpg" alt="Líneas Base Factores Bióticos - Parque Eólico Malleco" loading="lazy" width="400" height="220"/>
@@ -501,6 +511,7 @@
               <p class="project-description" data-es="Investigador Especialista Externo de Bioecos. Elaboración de líneas base de factores bióticos para parques eólicos, incluyendo caracterización de flora, fauna y ecosistemas." data-en="External Specialist Researcher for Bioecos. Development of biotic baseline studies for wind parks, including characterization of flora, fauna, and ecosystems.">Investigador Especialista Externo de Bioecos. Elaboración de líneas base de factores bióticos para parques eólicos, incluyendo caracterización de flora, fauna y ecosistemas.</p>
             </div>
           </div>
+
           <div class="project-card reveal">
             <div class="project-image">
               <img src="images/proyecto-metro.jpg" alt="Metro de Santiago - Evacuación de Murciélagos" loading="lazy" width="400" height="220"/>
@@ -512,6 +523,7 @@
               <p class="project-description" data-es="Desarrollo de metodologías seguras para evacuar colonia de 3,000 murciélagos en talleres de Línea 4." data-en="Development of safe methodologies to evacuate a colony of 3,000 bats in Line 4 workshops.">Desarrollo de metodologías seguras para evacuar colonia de 3,000 murciélagos en talleres de Línea 4.</p>
             </div>
           </div>
+
           <div class="project-card reveal">
             <div class="project-image">
               <img src="images/proyecto-vitivinícola.jpg" alt="Evaluación Fragmentación Paisaje Vitivinícola" loading="lazy" width="400" height="220"/>
@@ -523,6 +535,43 @@
               <p class="project-description" data-es="Análisis de fragmentación del paisaje en sistemas vitivinícolas de Chile Central y su implicancia en la funcionalidad ecológica." data-en="Landscape fragmentation analysis in wine systems of Central Chile and implications for ecological functionality.">Análisis de fragmentación del paisaje en sistemas vitivinícolas de Chile Central y su implicancia en la funcionalidad ecológica.</p>
             </div>
           </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img src="images/proyecto-teleferico.jpg" alt="Teleférico de Mérida" loading="lazy" width="400" height="220"/>
+              <div class="project-image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-es="Infraestructura" data-en="Infrastructure">Infraestructura</span>
+              <h3 class="project-title" data-es="Teleférico de Mérida" data-en="Mérida Cable Car">Teleférico de Mérida</h3>
+              <p class="project-description" data-es="Gerencia ambiental durante 4 años, implementando 20 Planes de Manejo Ambiental con CERO accidentes." data-en="Environmental management for 4 years, implementing 20 Environmental Management Plans with ZERO accidents.">Gerencia ambiental durante 4 años, implementando 20 Planes de Manejo Ambiental con CERO accidentes.</p>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img src="images/proyecto-solar.jpg" alt="Santiago Solar" loading="lazy" width="400" height="220"/>
+              <div class="project-image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-es="Energía Renovable" data-en="Renewable Energy">Energía Renovable</span>
+              <h3 class="project-title" data-es="Santiago Solar" data-en="Santiago Solar">Santiago Solar</h3>
+              <p class="project-description" data-es="Jefe de proyectos para medida de compensación ambiental del parque solar en Til Til." data-en="Project manager for environmental compensation measure of the solar park in Til Til.">Jefe de proyectos para medida de compensación ambiental del parque solar en Til Til.</p>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img src="images/proyecto-bosque.jpg" alt="Bosque CONAF-FAO" loading="lazy" width="400" height="220"/>
+              <div class="project-image-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-es="Restauración" data-en="Restoration">Restauración</span>
+              <h3 class="project-title" data-es="Bosque CONAF-FAO" data-en="CONAF-FAO Forest">Bosque CONAF-FAO</h3>
+              <p class="project-description" data-es="Restauración de bosque nativo y extracción de Pino insigne en Región del Maule." data-en="Native forest restoration and removal of Radiata Pine in Maule Region.">Restauración de bosque nativo y extracción de Pino insigne en Región del Maule.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -534,19 +583,56 @@
           <div class="skills-category reveal">
             <h3><i class="fas fa-satellite-dish" aria-hidden="true"></i> <span data-es="GIS & Sensores Remotos" data-en="GIS & Remote Sensing">GIS & Sensores Remotos</span></h3>
             <div class="skills-tags">
-              <span class="skill-tag">ArcGIS</span><span class="skill-tag">QGIS</span><span class="skill-tag">Google Earth Engine</span><span class="skill-tag">Drones RPAS/UAV</span><span class="skill-tag">Imágenes Satelitales</span><span class="skill-tag">Cartografía Digital</span><span class="skill-tag">Análisis Espacial</span><span class="skill-tag">Ecología del Paisaje</span>
+              <span class="skill-tag">ArcGIS</span>
+              <span class="skill-tag">QGIS</span>
+              <span class="skill-tag">Google Earth Engine</span>
+              <span class="skill-tag">Drones RPAS/UAV</span>
+              <span class="skill-tag">Imágenes Satelitales</span>
+              <span class="skill-tag">Cartografía Digital</span>
+              <span class="skill-tag">Análisis Espacial</span>
+              <span class="skill-tag">Ecología del Paisaje</span>
             </div>
           </div>
+
           <div class="skills-category reveal">
             <h3><i class="fas fa-code" aria-hidden="true"></i> <span data-es="Programación & Inteligencia Artificial" data-en="Programming & Artificial Intelligence">Programación & Inteligencia Artificial</span></h3>
             <div class="skills-tags">
-              <span class="skill-tag tech">Python</span><span class="skill-tag tech">R</span><span class="skill-tag tech">JavaScript</span><span class="skill-tag tech">Machine Learning</span><span class="skill-tag tech">Deep Learning</span><span class="skill-tag tech">GIS Automation</span><span class="skill-tag tech">Análisis de Datos</span>
+              <span class="skill-tag tech">Python</span>
+              <span class="skill-tag tech">R</span>
+              <span class="skill-tag tech">JavaScript</span>
+              <span class="skill-tag tech">Machine Learning</span>
+              <span class="skill-tag tech">Deep Learning</span>
+              <span class="skill-tag tech">GIS Automation</span>
+              <span class="skill-tag tech">Análisis de Datos</span>
+              <span class="skill-tag tech">Visualización de Datos</span>
             </div>
           </div>
+
           <div class="skills-category reveal">
             <h3><i class="fas fa-clipboard-check" aria-hidden="true"></i> <span data-es="Gestión Ambiental" data-en="Environmental Management">Gestión Ambiental</span></h3>
             <div class="skills-tags">
-              <span class="skill-tag">EIA/DIA (Ley 19.300)</span><span class="skill-tag">ISO 9001</span><span class="skill-tag">ISO 14001</span><span class="skill-tag">ISO 45001</span><span class="skill-tag">Auditorías Ambientales</span><span class="skill-tag">Monitoreo Ambiental</span>
+              <span class="skill-tag">EIA/DIA (Ley 19.300)</span>
+              <span class="skill-tag">ISO 9001</span>
+              <span class="skill-tag">ISO 14001</span>
+              <span class="skill-tag">ISO 45001</span>
+              <span class="skill-tag">Auditorías Ambientales</span>
+              <span class="skill-tag">Monitoreo Ambiental</span>
+              <span class="skill-tag">Planes de Manejo</span>
+              <span class="skill-tag">Evaluación de Impacto</span>
+            </div>
+          </div>
+
+          <div class="skills-category reveal">
+            <h3><i class="fas fa-dove" aria-hidden="true"></i> <span data-es="Conservación & Ecología" data-en="Conservation & Ecology">Conservación & Ecología</span></h3>
+            <div class="skills-tags">
+              <span class="skill-tag">Ecología Tropical</span>
+              <span class="skill-tag">Manejo de Fauna</span>
+              <span class="skill-tag">Restauración Ecosistémica</span>
+              <span class="skill-tag">Biodiversidad</span>
+              <span class="skill-tag">Educación Ambiental</span>
+              <span class="skill-tag">Expediciones Científicas</span>
+              <span class="skill-tag">Ornitología</span>
+              <span class="skill-tag">Botánica</span>
             </div>
           </div>
         </div>
@@ -556,26 +642,96 @@
     <section id="ai-skills" class="ai-skills-section" aria-label="Inteligencia Artificial y Machine Learning">
       <div class="container">
         <h2 class="text-center reveal" data-es="Inteligencia Artificial & Machine Learning" data-en="Artificial Intelligence & Machine Learning">Inteligencia Artificial & Machine Learning</h2>
+        <p class="text-center reveal" style="max-width: 800px; margin: 0 auto 2rem;" data-es="Aplicación de tecnologías de IA de vanguardia para análisis ambiental, procesamiento de imágenes satelitales y automatización de procesos GIS." data-en="Application of cutting-edge AI technologies for environmental analysis, satellite image processing, and GIS process automation.">
+          Aplicación de tecnologías de IA de vanguardia para análisis ambiental, procesamiento de imágenes satelitales y automatización de procesos GIS.
+        </p>
+        
         <div class="ai-skills-grid">
           <div class="ai-skill-card reveal">
             <h4><i class="fas fa-robot"></i> <span data-es="Large Language Models (LLMs)" data-en="Large Language Models (LLMs)">Large Language Models (LLMs)</span></h4>
-            <p data-es="Dominio de modelos de lenguaje de última generación para automatización, análisis de texto y generación de contenido técnico ambiental." data-en="Mastery of state-of-the-art language models for automation, text analysis, and environmental technical content generation.">Dominio de modelos de lenguaje de última generación para automatización, análisis de texto y generación de contenido técnico ambiental.</p>
+            <p data-es="Dominio de modelos de lenguaje de última generación para automatización, análisis de texto y generación de contenido técnico ambiental." data-en="Mastery of state-of-the-art language models for automation, text analysis, and environmental technical content generation.">
+              Dominio de modelos de lenguaje de última generación para automatización, análisis de texto y generación de contenido técnico ambiental.
+            </p>
             <ul>
-              <li><strong>Claude</strong> (Anthropic)</li><li><strong>Gemini</strong> (Google)</li><li><strong>Google AI Studio</strong></li><li><strong>Ollama</strong> (Local LLMs)</li><li data-es="Ingeniería de Prompts avanzada" data-en="Advanced Prompt Engineering">Ingeniería de Prompts avanzada</li>
+              <li><strong>Claude</strong> (Anthropic)</li>
+              <li><strong>Copilot Studio</strong> (Microsoft)</li>
+              <li><strong>Gemini</strong> (Google)</li>
+              <li><strong>Google AI Studio</strong></li>
+              <li><strong>Antigravity</strong></li>
+              <li><strong>Ollama</strong> (Local LLMs)</li>
+              <li><strong>Qwen</strong> (Alibaba)</li>
+              <li><strong>DeepSeek</strong></li>
+              <li data-es="Ingeniería de Prompts avanzada" data-en="Advanced Prompt Engineering">Ingeniería de Prompts avanzada</li>
             </ul>
           </div>
+
+          <div class="ai-skill-card reveal">
+            <h4><i class="fas fa-language"></i> <span data-es="Procesamiento del Lenguaje Natural (NLP)" data-en="Natural Language Processing (NLP)">Procesamiento del Lenguaje Natural (NLP)</span></h4>
+            <p data-es="Análisis y comprensión del lenguaje natural aplicado a documentación ambiental, informes técnicos y automatización de procesos." data-en="Natural language analysis and understanding applied to environmental documentation, technical reports, and process automation.">
+              Análisis y comprensión del lenguaje natural aplicado a documentación ambiental, informes técnicos y automatización de procesos.
+            </p>
+            <ul>
+              <li data-es="Arquitectura Transformer (base de LLMs)" data-en="Transformer Architecture (LLM foundation)">Arquitectura Transformer (base de LLMs)</li>
+              <li><strong>Hugging Face Transformers</strong></li>
+              <li><strong>SpaCy</strong></li>
+              <li data-es="Análisis de sentimiento y clasificación" data-en="Sentiment analysis and classification">Análisis de sentimiento y clasificación</li>
+              <li data-es="Extracción de entidades nombradas (NER)" data-en="Named Entity Recognition (NER)">Extracción de entidades nombradas (NER)</li>
+            </ul>
+          </div>
+
           <div class="ai-skill-card reveal">
             <h4><i class="fas fa-eye"></i> <span data-es="Visión por Computador (Computer Vision)" data-en="Computer Vision">Visión por Computador (Computer Vision)</span></h4>
-            <p data-es="Procesamiento de imágenes satelitales y aéreas para análisis de cobertura vegetal, detección de cambios y monitoreo ambiental." data-en="Satellite and aerial image processing for vegetation cover analysis, change detection, and environmental monitoring.">Procesamiento de imágenes satelitales y aéreas para análisis de cobertura vegetal, detección de cambios y monitoreo ambiental.</p>
+            <p data-es="Procesamiento de imágenes satelitales y aéreas para análisis de cobertura vegetal, detección de cambios y monitoreo ambiental." data-en="Satellite and aerial image processing for vegetation cover analysis, change detection, and environmental monitoring.">
+              Procesamiento de imágenes satelitales y aéreas para análisis de cobertura vegetal, detección de cambios y monitoreo ambiental.
+            </p>
             <ul>
-              <li><strong>OpenCV</strong></li><li><strong>YOLO</strong> (You Only Look Once)</li><li data-es="Redes Neuronales Convolucionales (CNN)" data-en="Convolutional Neural Networks (CNN)">Redes Neuronales Convolucionales (CNN)</li><li data-es="Detección de objetos en imágenes satelitales" data-en="Object detection in satellite imagery">Detección de objetos en imágenes satelitales</li>
+              <li><strong>OpenCV</strong></li>
+              <li><strong>YOLO</strong> (You Only Look Once)</li>
+              <li data-es="Redes Neuronales Convolucionales (CNN)" data-en="Convolutional Neural Networks (CNN)">Redes Neuronales Convolucionales (CNN)</li>
+              <li data-es="Detección de objetos en imágenes satelitales" data-en="Object detection in satellite imagery">Detección de objetos en imágenes satelitales</li>
+              <li data-es="Segmentación semántica" data-en="Semantic segmentation">Segmentación semántica</li>
             </ul>
           </div>
+
           <div class="ai-skill-card reveal">
             <h4><i class="fas fa-brain"></i> <span data-es="Machine Learning & Deep Learning" data-en="Machine Learning & Deep Learning">Machine Learning & Deep Learning</span></h4>
-            <p data-es="Desarrollo de modelos predictivos y analíticos para evaluación de impacto ambiental, predicción de cambios ecosistémicos y optimización de recursos." data-en="Development of predictive and analytical models for environmental impact assessment, ecosystem change prediction, and resource optimization.">Desarrollo de modelos predictivos y analíticos para evaluación de impacto ambiental, predicción de cambios ecosistémicos y optimización de recursos.</p>
+            <p data-es="Desarrollo de modelos predictivos y analíticos para evaluación de impacto ambiental, predicción de cambios ecosistémicos y optimización de recursos." data-en="Development of predictive and analytical models for environmental impact assessment, ecosystem change prediction, and resource optimization.">
+              Desarrollo de modelos predictivos y analíticos para evaluación de impacto ambiental, predicción de cambios ecosistémicos y optimización de recursos.
+            </p>
             <ul>
-              <li><strong>Scikit-learn</strong>, <strong>TensorFlow</strong>, <strong>PyTorch</strong></li><li data-es="Aprendizaje supervisado y no supervisado" data-en="Supervised and unsupervised learning">Aprendizaje supervisado y no supervisado</li><li><strong>Reinforcement Learning</strong></li>
+              <li><strong>Scikit-learn</strong>, <strong>TensorFlow</strong>, <strong>PyTorch</strong></li>
+              <li data-es="Aprendizaje supervisado y no supervisado" data-en="Supervised and unsupervised learning">Aprendizaje supervisado y no supervisado</li>
+              <li><strong>Reinforcement Learning</strong></li>
+              <li data-es="Modelos de regresión y clasificación" data-en="Regression and classification models">Modelos de regresión y clasificación</li>
+              <li data-es="Validación cruzada y optimización" data-en="Cross-validation and optimization">Validación cruzada y optimización</li>
+            </ul>
+          </div>
+
+          <div class="ai-skill-card reveal">
+            <h4><i class="fas fa-cloud"></i> <span data-es="Plataformas Cloud AI" data-en="Cloud AI Platforms">Plataformas Cloud AI</span></h4>
+            <p data-es="Entrenamiento y despliegue de modelos de IA utilizando infraestructura cloud escalable con GPUs/TPUs para procesamiento de grandes volúmenes de datos ambientales." data-en="Training and deployment of AI models using scalable cloud infrastructure with GPUs/TPUs for processing large volumes of environmental data.">
+              Entrenamiento y despliegue de modelos de IA utilizando infraestructura cloud escalable con GPUs/TPUs para procesamiento de grandes volúmenes de datos ambientales.
+            </p>
+            <ul>
+              <li><strong>AWS SageMaker</strong></li>
+              <li><strong>Google Cloud Vertex AI</strong></li>
+              <li><strong>Microsoft Azure Machine Learning</strong></li>
+              <li data-es="Entrenamiento con GPUs/TPUs" data-en="GPU/TPU training">Entrenamiento con GPUs/TPUs</li>
+              <li data-es="MLOps y despliegue continuo" data-en="MLOps and continuous deployment">MLOps y despliegue continuo</li>
+            </ul>
+          </div>
+
+          <div class="ai-skill-card reveal">
+            <h4><i class="fas fa-server"></i> <span data-es="MLOps & Containerización" data-en="MLOps & Containerization">MLOps & Containerización</span></h4>
+            <p data-es="Empaquetado, orquestación y despliegue de modelos de IA en entornos de producción, asegurando escalabilidad y reproducibilidad." data-en="Packaging, orchestration, and deployment of AI models in production environments, ensuring scalability and reproducibility.">
+              Empaquetado, orquestación y despliegue de modelos de IA en entornos de producción, asegurando escalabilidad y reproducibilidad.
+            </p>
+            <ul>
+              <li><strong>Docker</strong></li>
+              <li><strong>Kubernetes</strong></li>
+              <li data-es="CI/CD para modelos de ML" data-en="CI/CD for ML models">CI/CD para modelos de ML</li>
+              <li data-es="Versionado de modelos (MLflow)" data-en="Model versioning (MLflow)">Versionado de modelos (MLflow)</li>
+              <li data-es="Monitoreo y logging" data-en="Monitoring and logging">Monitoreo y logging</li>
             </ul>
           </div>
         </div>
@@ -587,14 +743,142 @@
         <h2 class="text-center reveal" data-es="Ciencia Ciudadana: Murciélagos de Chile" data-en="Citizen Science: Bats of Chile">Ciencia Ciudadana: Murciélagos de Chile</h2>
         <div class="map-info-box reveal">
           <h3 data-es="🦇 Murciélagos de Chile" data-en="🦇 Bats of Chile">🦇 Murciélagos de Chile</h3>
-          <p data-es="Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile." data-en="Interactive citizen science map for monitoring and conservation of bats in Chile.">Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile.</p>
+          <p data-es="Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile." data-en="Interactive citizen science map for monitoring and conservation of bats in Chile.">
+            Mapa interactivo de ciencia ciudadana para el monitoreo y conservación de quirópteros en Chile.
+          </p>
           <div class="map-collaboration">
             <i class="fas fa-handshake" aria-hidden="true"></i>
-            <span data-es="En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)" data-en="In collaboration with Bat Conservation Program of Chile (PCMCh)">En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)</span>
+            <span data-es="En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)" data-en="In collaboration with Bat Conservation Program of Chile (PCMCh)">
+              En colaboración con Programa de Conservación de Murciélagos de Chile (PCMCh)
+            </span>
           </div>
         </div>
         <div class="map-container reveal">
           <iframe id="lazy-map" data-src="https://www.google.com/maps/d/u/0/embed?mid=1ZjUFUflQKGELB8vMK9lBV7SPGsQs3bFH&ehbc=2E312F" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Murciélagos de Chile - Ciencia Ciudadana PCMCh"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="gis" class="section gis-section" aria-label="Galería GIS">
+      <div class="container">
+        <h2 class="text-center reveal" data-es="Galería GIS & Análisis Espacial" data-en="GIS & Spatial Analysis Gallery">Galería GIS & Análisis Espacial</h2>
+        <p class="text-center reveal" style="max-width: 700px; margin: 0 auto 2rem;" data-es="Análisis espacial avanzado, cartografía temática, modelamiento con IA y monitoreo con drones para proyectos ambientales." data-en="Advanced spatial analysis, thematic cartography, AI modeling, and drone monitoring for environmental projects.">
+          Análisis espacial avanzado, cartografía temática, modelamiento con IA y monitoreo con drones para proyectos ambientales.
+        </p>
+        <div class="gis-grid">
+          <div class="gis-item reveal">
+            <img src="images/gis-map1.jpg" alt="Análisis GIS - Cobertura Vegetal" loading="lazy" width="400" height="300"/>
+            <div class="gis-item-overlay">
+              <div class="gis-item-title" data-es="Análisis de Cobertura Vegetal con IA" data-en="Vegetation Cover Analysis with AI">Análisis de Cobertura Vegetal con IA</div>
+            </div>
+          </div>
+          <div class="gis-item reveal">
+            <img src="images/gis-map2.jpg" alt="Fragmentación del Paisaje" loading="lazy" width="400" height="300"/>
+            <div class="gis-item-overlay">
+              <div class="gis-item-title" data-es="Fragmentación del Paisaje" data-en="Landscape Fragmentation">Fragmentación del Paisaje</div>
+            </div>
+          </div>
+          <div class="gis-item reveal">
+            <img src="images/gis-drone.jpg" alt="Monitoreo con Drones" loading="lazy" width="400" height="300"/>
+            <div class="gis-item-overlay">
+              <div class="gis-item-title" data-es="Monitoreo con Drones RPAS" data-en="RPAS Drone Monitoring">Monitoreo con Drones RPAS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicaciones" class="section" aria-label="Publicaciones científicas">
+      <div class="container">
+        <h2 class="text-center reveal" data-es="Publicaciones Científicas" data-en="Scientific Publications">Publicaciones Científicas</h2>
+        <div class="publications-list">
+          
+          <div class="publication-item reveal">
+            <div class="publication-icon"><i class="fas fa-book" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="publication-title" data-es="Libro Rojo de los Ecosistemas Terrestres de Venezuela" data-en="Red Book of Terrestrial Ecosystems of Venezuela">Libro Rojo de los Ecosistemas Terrestres de Venezuela</h3>
+              <p class="publication-meta" data-es="Colaborador | Publicado" data-en="Contributor | Published">Colaborador | Publicado</p>
+            </div>
+          </div>
+
+          <div class="publication-item reveal">
+            <div class="publication-icon"><i class="fas fa-feather-alt" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="publication-title" data-es="Aves consumidoras de frutos de cactáceas columnares del enclave semiárido de Lagunillas, Mérida" data-en="Fruit-eating birds of columnar cacti in the semi-arid enclave of Lagunillas, Mérida">Aves consumidoras de frutos de cactáceas columnares del enclave semiárido de Lagunillas, Mérida</h3>
+              <p class="publication-meta" data-es="Artículo científico | Ecología tropical" data-en="Scientific article | Tropical ecology">Artículo científico | Ecología tropical</p>
+            </div>
+          </div>
+
+          <div class="publication-item reveal">
+            <div class="publication-icon"><i class="fas fa-tree" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="publication-title" data-es="Transformación del paisaje de selva a amazónica derivado de las actividades agrícolas de la etnia Piaroa" data-en="Transformation of the jungle landscape to Amazonian derived from agricultural activities of the Piaroa ethnicity">Transformación del paisaje de selva a amazónica derivado de las actividades agrícolas de la etnia Piaroa</h3>
+              <p class="publication-meta" data-es="Investigación | Reserva Forestal Sipapo, Amazonas" data-en="Research | Sipapo Forest Reserve, Amazonas">Investigación | Reserva Forestal Sipapo, Amazonas</p>
+            </div>
+          </div>
+
+          <div class="publication-item reveal">
+            <div class="publication-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
+            <div>
+              <h3 class="publication-title" data-es="Proyecto de Conectividad entre los Parques Nacionales Sierra Nevada y Páramos Batallón-La Negra (Venezuela), como propuesta de áreas prioritarias de conservación" data-en="Connectivity Project between Sierra Nevada and Batallón-La Negra Páramos National Parks (Venezuela), as a proposal for priority conservation areas">Proyecto de Conectividad entre los Parques Nacionales Sierra Nevada y Páramos Batallón-La Negra (Venezuela), como propuesta de áreas prioritarias de conservación</h3>
+              <p class="publication-meta" data-es="Investigación | Publicado" data-en="Research | Published">Investigación | Publicado</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section" style="background: var(--gris-claro);" aria-label="Trayectoria profesional">
+      <div class="container">
+        <h2 class="text-center reveal" data-es="Trayectoria Profesional" data-en="Professional Trajectory">Trayectoria Profesional</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-date" data-es="2023 - Presente" data-en="2023 - Present">2023 - Presente</div>
+              <h3 class="timeline-title" data-es="Ingeniero de Proyecto - Experto Ambiental" data-en="Project Engineer - Environmental Expert">Ingeniero de Proyecto - Experto Ambiental</h3>
+              <p class="timeline-company">Gestiona Consultores | BHP Minera Escondida</p>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-date" data-es="2021 - 2023" data-en="2021 - 2023">2021 - 2023</div>
+              <h3 class="timeline-title" data-es="Jefe de Proyectos" data-en="Project Manager">Jefe de Proyectos</h3>
+              <p class="timeline-company">Biocys | Bosque CONAF-FAO, Santiago Solar</p>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-date" data-es="2015 - 2024" data-en="2015 - 2024">2015 - 2024</div>
+              <h3 class="timeline-title" data-es="Investigador Especialista" data-en="Specialist Researcher">Investigador Especialista</h3>
+              <p class="timeline-company">Bioecos | Metro de Santiago, Reserva Chinchillas</p>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-date" data-es="2011 - 2015" data-en="2011 - 2015">2011 - 2015</div>
+              <h3 class="timeline-title" data-es="Gerente de Asuntos Ambientales" data-en="Environmental Affairs Manager">Gerente de Asuntos Ambientales</h3>
+              <p class="timeline-company">Doppelmayr | Teleférico de Mérida</p>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-content">
+              <div class="timeline-date" data-es="2006 - 2007" data-en="2006 - 2007">2006 - 2007</div>
+              <h3 class="timeline-title" data-es="Biólogo Investigador" data-en="Research Biologist">Biólogo Investigador</h3>
+              <p class="timeline-company">IVIC | Atlas de Biodiversidad Indígena Amazónica</p>
+            </div>
+            <div class="timeline-dot" aria-hidden="true"></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -610,6 +894,11 @@
             <a href="mailto:leonardo.ruiz@gmail.com">leonardo.ruiz@gmail.com</a>
           </div>
           <div class="contact-card reveal">
+            <div class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+            <h3 data-es="Teléfono" data-en="Phone">Teléfono</h3>
+            <a href="tel:+56984309798">+56 9 8430 9798</a>
+          </div>
+          <div class="contact-card reveal">
             <div class="contact-icon whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
             <h3>WhatsApp</h3>
             <a href="https://wa.me/56984309798?text=Hola%20Leonardo,%20me%20gustaría%20contactarte%20sobre%20un%20proyecto%20de%20consultoría%20ambiental." target="_blank" rel="noopener noreferrer" data-es="Escríbeme por WhatsApp" data-en="Message me on WhatsApp">Escríbeme por WhatsApp</a>
@@ -618,6 +907,11 @@
             <div class="contact-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></div>
             <h3>LinkedIn</h3>
             <a href="https://linkedin.com/in/le0ruiz" target="_blank" rel="noopener noreferrer">linkedin.com/in/le0ruiz</a>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-icon" style="background: var(--arena);"><i class="fas fa-file-pdf" aria-hidden="true"></i></div>
+            <h3 data-es="Descargar CV" data-en="Download CV">Descargar CV</h3>
+            <a href="cv/leonardo-ruiz-cv.pdf" download="Leonardo_Ruiz_CV.pdf" target="_blank" rel="noopener noreferrer" data-es="Descargar PDF" data-en="Download PDF">Descargar PDF</a>
           </div>
         </div>
       </div>
